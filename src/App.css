@@ -1,38 +1,76 @@
-.App {
+* {
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  background-color: #0B2434;
+  overflow: hidden;
+  font-family: 'Karla', sans-serif;
+}
+
+.green {
+  background-color: #59E391;
+}
+
+.game-title {
+  font-size: 5rem;  
+  margin: 0;
+}
+
+.game-desc {
+  max-width: 20%;
+  font-size: large;
+  font-weight: 400;
+  margin-top: 5px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main-section {
+  height: 95vh;
+  max-width:100%;
+  margin:2rem;
+  background-color: #F5F5F5;
+  border-radius: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.dice-container {
+  padding: 2rem;
+  display: grid;
+  grid-template: auto auto / repeat(5 , 1fr);
+  gap:20px;
+}
+
+.dice-box{
+    height: 50px;
+    width: 50px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: white;
+}
+
+.dice-box > span {
+  font-size: 2rem;
+}
+
+.button-roll {
+  width: 100px;
+  height: 40px;
+  background-color: #5035FF;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  border: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  font-family: 'Karla', sans-serif;
+  font-size: large;
 }
