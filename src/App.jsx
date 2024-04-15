@@ -10,21 +10,17 @@ export default function App() {
     const [allDice, setDice] = React.useState(allNewDice());
     const [tenzie, setTenzie] = React.useState(false);
 
-    function checkWon() {
-
-        const winNum = allDice[0].value;
-        for (let i = 0; i < allDice.length; i++) {
-            if (allDice[i].isHeld === false || winNum !== allDice[i].value) {
-                return false;
-            }
-        }
-        return true;
-    }
-
 
     React.useEffect(() => {
-        setTenzie(checkWon())
-
+        setTenzie(() => {
+            const winNum = allDice[0].value;
+            for (let i = 0; i < allDice.length; i++) {
+                if (allDice[i].isHeld === false || winNum !== allDice[i].value) {
+                    return false;
+                }
+            }
+            return true;
+        })
 
     }, [allDice])
 
