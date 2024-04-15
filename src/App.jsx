@@ -74,21 +74,19 @@ export default function App() {
 
 
     return (
-        <div className="container">
-            <main className="main-section">
-                <h1 className="game-title">Tenzies</h1>
-                <p className="game-desc">Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p>
-                <div className="dice-container">
-                    {diceElements}
-                </div>
-                <button
-                    className="button-roll"
-                    onClick={rollDice}
+        <main className="main-section">
+            <h1 className="game-title">Tenzies</h1>
+            <p className="game-desc">Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p>
+            <div className="dice-container">
+                {diceElements}
+            </div>
+            <button
+                className="button-roll"
+                onClick={rollDice}
 
-                >
-                    {tenzie ? "Reset" : "Roll"}
-                </button>
-            </main>
-        </div>
+            >
+                {tenzie ? "Reset" : "Roll"}
+            </button>
+        </main>
     )
 }
